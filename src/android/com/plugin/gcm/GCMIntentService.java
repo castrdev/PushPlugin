@@ -15,6 +15,8 @@ import android.util.Log;
 
 import com.google.android.gcm.GCMBaseIntentService;
 
+import com.castr.castrionicapp.R;
+
 @SuppressLint("NewApi")
 public class GCMIntentService extends GCMBaseIntentService {
 
@@ -98,10 +100,21 @@ public class GCMIntentService extends GCMBaseIntentService {
 			} catch (NumberFormatException e) {}
 		}
 		
+		/*
 		NotificationCompat.Builder mBuilder =
 			new NotificationCompat.Builder(context)
 				.setDefaults(defaults)
 				.setSmallIcon(context.getApplicationInfo().icon)
+				.setWhen(System.currentTimeMillis())
+				.setContentTitle(extras.getString("title"))
+				.setTicker(extras.getString("title"))
+				.setContentIntent(contentIntent)
+				.setAutoCancel(true);
+		*/
+		NotificationCompat.Builder mBuilder =
+			new NotificationCompat.Builder(context)
+				.setDefaults(defaults)
+				.setSmallIcon(R.drawable.notification_small)
 				.setWhen(System.currentTimeMillis())
 				.setContentTitle(extras.getString("title"))
 				.setTicker(extras.getString("title"))

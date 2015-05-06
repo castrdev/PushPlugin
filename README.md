@@ -1,3 +1,6 @@
+# Fork of https://github.com/phonegap-build/PushPlugin.git
+# modification based on this issue: https://github.com/phonegap-build/PushPlugin/issues/487
+
 # Cordova Push Notifications Plugin for Android, iOS, WP8, Windows8, BlackBerry 10 and Amazon Fire OS
 
 ## DESCRIPTION
